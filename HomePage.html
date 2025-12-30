@@ -1,0 +1,4031 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.7)
+        );
+      }
+
+      .nav-blur {
+        backdrop-filter: saturate(180%) blur(20px);
+      }
+
+      .carousel-item {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .btn-primary {
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        transform: scale(1.05);
+      }
+
+      .footer-link: hover {
+        text-decoration: underline;
+      }
+
+      .menu-section {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      . menu-section.active {
+        max-height: 500px;
+      }
+
+      /* Footer accordion styles */
+      @media (min-width: 820px) {
+        .footer-content {
+          max-height: none !important;
+          opacity: 1 !important;
+          overflow: visible !important;
+        }
+
+        /* Footer styles for screens 820px to 1920px */
+        footer {
+          background-color: #252424 !important;
+          color: #cacaca !important;
+        }
+
+        footer .border-gray-300 {
+          border-color: #424245 !important;
+        }
+
+        footer h3 {
+          color: #d9d7d7 !important;
+        }
+
+        footer .footer-link {
+          color: #f5f5f7 !important;
+        }
+
+        footer .footer-link:hover {
+          color: #bcbbbb !important;
+        }
+
+        footer .text-gray-400 {
+          color: #86868b !important;
+        }
+      }
+
+      .footer-arrow {
+        transition: transform 0.3s ease;
+      }
+
+      .footer-arrow.rotate-180 {
+        transform: rotate(180deg);
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body class="bg-white text-gray-900 min-w-[320px]">
+    <!-- Navigation Header -->
+    <header
+      class="fixed top-0 left-0 right-0 bg-[#fbfbfd]/80 nav-blur z-50 h-11"
+    >
+      <div
+        class="max-w-[980px] mx-auto h-full flex items-center justify-between px-5"
+      >
+        <!-- Apple Logo -->
+        <a href="#" class="text-white w-[40px] h-[40px]">
+          <svg class="w-full h-full" viewBox="0 0 14 44" fill="black">
+            <path
+              d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+            />
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center h-full -mx-2 space-x-3">
+          <!-- Store with Dropdown -->
+          <div class="relative h-full flex items-center store-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Store</a
+            >
+
+            <!-- Mega Dropdown Menu - Smooth Slide Down -->
+            <div
+              class="store-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Shop -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">Shop</h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop Gifts</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Vision Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Accessories</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Quick Links
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Find a Store</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Order Status</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Trade In</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: Shop Special Stores -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop Special Stores
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Certified Refurbished</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Education</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Business</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Veterans and Military</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Government</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mac with Dropdown -->
+          <div class="relative h-full flex items-center mac-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Mac</a
+            >
+
+            <!-- Mac Mega Dropdown Menu -->
+            <div
+              class="mac-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Mac -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Mac
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore All Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >MacBook Air</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >MacBook Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iMac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac mini</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac Studio</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Displays</a
+                          >
+                        </li>
+                        <li class="pt-4 mt-4">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Compare Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Switch from PC to Mac</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Mac -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">Shop Mac</h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Help Me Choose</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Trade In</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from Mac -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from Mac
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >macOS Tahoe</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Intelligence</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apps by Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Better with iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iCloud+</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac for Business</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Education</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- iPad with Dropdown -->
+          <d--iv class="relative h-full flex items-center ipad-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >iPad</a
+            >
+
+            <!-- iPad Mega Dropdown Menu -->
+            <div
+              class="ipad-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore iPad -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore iPad
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore All iPad</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad Air</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >iPad mini</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Pencil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Keyboards</a
+                          >
+                        </li>
+                        <li class="pt-4 mt-4">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Compare iPad</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop iPad -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">Shop iPad</h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop iPad</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Trade In</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from iPad -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from iPad
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPadOS 26</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Intelligence</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apps by Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iCloud+</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Education</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </d--iv>
+
+          <!---->
+          <!-- iPhone with Dropdown -->
+          <div class="relative h-full flex items-center iPhone-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >iPhone</a
+            >
+
+            <!-- iPhone Mega Dropdown Menu -->
+            <div
+              class="iPhone-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore iPhone -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore iPhone
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore All iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone 17 Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone Air</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone 17</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >iPhone 16</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone 16e</a
+                          >
+                        </li>
+                        <li class="pt-4 mt-4">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Compare iPhone Switch from Android</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop iPhone -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop iPhone
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Trade In</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Carrier Deals at Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from iPhone -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from iPhone
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >ios 26</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Intelligence</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apps by Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone Privacy</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone Privacy</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Better with Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iCloud+</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Wallet, Pay, Card</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- Watch with Dropdown -->
+          <div class="relative h-full flex items-center Watch-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Watch</a
+            >
+
+            <!-- Watch Mega Dropdown Menu -->
+            <div
+              class="Watch-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Watch -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Watch
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore All Apple Watch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch Serise 11</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple watch SE 3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch Ultra 3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Apple Watch Nike</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch Hermes</a
+                          >
+                        </li>
+                        <li class="pt-4 mt-4">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Compare Watch Why Apple Watch</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Watch -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop Watch
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop Apple Watch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Apple Watch Brands</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Trade In</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from Watch -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from Watch
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >WatchOS 26</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch For Your kids</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apps by Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Fitness+</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- Vision with Dropdown -->
+          <div class="relative h-full flex items-center vision-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Vision</a
+            >
+
+            <!-- Vision Mega Dropdown Menu -->
+            <div
+              class="vision-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Vision -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Vision
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore Apple Vision Pro</a
+                          >
+                        </li>
+                        <li class="pt-2 mt-2">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Tech Space</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Vision -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop Vision
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop Apple Vision Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Vision Pro Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Book a Demo</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Financing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Personal Setup</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from Vision -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from Vision
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Vision Pro Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >VisionOS 26</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- AirPods with Dropdown -->
+          <div class="relative h-full flex items-center airpods-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >AirPods</a
+            >
+
+            <!-- AirPods Mega Dropdown Menu -->
+            <div
+              class="airpods-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore AirPods -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore AirPods
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore Apple AirPods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods 4</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods Pro 3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods Max</a
+                          >
+                        </li>
+                        <li class="pt-2 mt-2">
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Compare AirPods</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop AirPods -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop AirPods
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop AirPods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods Accessories</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from AirPods -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from AirPods
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Hearing Health</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Music</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Fitness+</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- TV & Home with Dropdown -->
+          <div class="relative h-full flex items-center tv-home-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >TV & Home</a
+            >
+
+            <!-- TV & Home Mega Dropdown Menu -->
+            <div
+              class="tv-home-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore TV & Home -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore TV & Home
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore TV & Home</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple TV 4</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >HomePod</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >HomePod mini</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop TV & Home -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop TV & Home
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Shop Apple TV 4K</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop HomePod</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop HomePod mini</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop Siri Remote</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >TV & Home Accessories</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from TV & Home -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        More from TV & Home
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >APPLE TV Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >HomePod Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare for Apple TV</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AppleCare for HomePod</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple TV app</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple TV</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >home app</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Music</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Siri</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPlay</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- Entertainment with Dropdown -->
+          <div class="relative h-full flex items-center entertainment-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Entertainment</a
+            >
+
+            <!-- Entertainment Mega Dropdown Menu -->
+            <div
+              class="entertainment-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Entertainment -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Entertainment
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Explore Entertainment</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple one</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple TV</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Music</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Arcade</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Fitness+</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple News+</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Podcasts</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Books</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >App Store</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Entertainment -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">Support</h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Apple TV Support</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Music Support</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- Accessories with Dropdown -->
+          <div class="relative h-full flex items-center accessories-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Accessories</a
+            >
+
+            <!-- Accessories Mega Dropdown Menu -->
+            <div
+              class="accessories-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Accessories -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Shop Accessories
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Shop All Accessories</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPad</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Watch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Vision Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >TV & Home</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Accessories -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Accessories
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Made by Apple</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Beats</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirTag</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Asistive Technologies</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!-- Support with Dropdown -->
+          <div class="relative h-full flex items-center support-nav-item">
+            <a
+              href="#"
+              class="text-xs text-[#1d1d1f] opacity-80 hover:opacity-100 px-2 h-full flex items-center transition-opacity"
+              >Support</a
+            >
+
+            <!-- Support Mega Dropdown Menu -->
+            <div
+              class="support-dropdown-menu fixed left-0 right-0 bg-[#fbfbfd] shadow-sm"
+            >
+              <div class="w-full overflow-hidden">
+                <div class="max-w-[980px] mx-auto px-8 pt-12 pb-14">
+                  <div class="grid grid-cols-3 gap-16">
+                    <!-- Column 1: Explore Support -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        Explore Support
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPhone</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Mac</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >iPod</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >watch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Vision Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >AirPods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Music</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[24px] leading-[1.16667] font-semibold text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >TV</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 2: Shop Support -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">Get help</h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover: text-[#06c] block transition-colors"
+                            >Community</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Check Coverage</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Genius Bar</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Repair</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Column 3: More from Support -->
+                    <div>
+                      <h3 class="text-[12px] text-[#6e6e73] mb-3">
+                        helpful Topics
+                      </h3>
+                      <ul class="space-y-2.5">
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Get AppleXCare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Apple Account and Password</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Billing & subscription</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-[12px] leading-[1.33337] text-[#1d1d1f] hover:text-[#06c] block transition-colors"
+                            >Accessibility</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Search & Bag Icons -->
+        <div class="flex items-center space-x-4">
+          <button class="text-black">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <button
+            class="h-full px-2 flex items-center justify-center hover:opacity-70 transition-opacity"
+          >
+            <img
+              src="https://c.animaapp.com/mjkzd99g5Nnvjx/assets/icon-26.svg"
+              alt="Bag"
+              class="w-[14px] h-[44px]"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <style>
+      /* Apple navigation blur effect */
+      .nav-blur {
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+      }
+
+      /* Dropdown menu initial state - hidden above */
+      .store-dropdown-menu,
+      .mac-dropdown-menu,
+      .ipad-dropdown-menu,
+      .iPhone-dropdown-menu,
+      .Watch-dropdown-menu,
+      .vision-dropdown-menu,
+      .airpods-dropdown-menu,
+      .tv-home-dropdown-menu,
+      .entertainment-dropdown-menu,
+      .accessories-dropdown-menu,
+      .support-dropdown-menu {
+        position: fixed;
+        top: 44px;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.28, 0.11, 0.32, 1),
+          opacity 0s cubic-bezier(0.28, 0.11, 0.32, 1);
+      }
+
+      /* Dropdown menu active state - slides down smoothly */
+      .store-nav-item: hover .store-dropdown-menu,
+  .store-dropdown-menu: hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+
+      . mac-nav-item:hover .mac-dropdown-menu,
+      .mac-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+
+      .ipad-nav-item:hover .ipad-dropdown-menu,
+      . ipad-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+
+      .iPhone-nav-item:hover .iPhone-dropdown-menu,
+      . iPhone-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .Watch-nav-item:hover .Watch-dropdown-menu,
+      . Watch-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .vision-nav-item:hover .vision-dropdown-menu,
+      .vision-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .airpods-nav-item:hover .airpods-dropdown-menu,
+      .airpods-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .tv-home-nav-item:hover .tv-home-dropdown-menu,
+      .tv-home-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .entertainment-nav-item:hover .entertainment-dropdown-menu,
+      .entertainment-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .accessories-nav-item:hover .accessories-dropdown-menu,
+      .accessories-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .support-nav-item:hover .support-dropdown-menu,
+      .support-dropdown-menu:hover {
+        max-height: 600px;
+        opacity: 1;
+      }
+      /* Smooth transition for all links */
+      .store-dropdown-menu a,
+      .mac-dropdown-menu a,
+      .ipad-dropdown-menu a,
+      .iPhone-dropdown-menu a,
+      .Watch-dropdown-menu a,
+      .vision-dropdown-menu a,
+      .airpods-dropdown-menu a,
+      .tv-home-dropdown-menu a,
+      .entertainment-dropdown-menu a,
+      .accessories-dropdown-menu a,
+      .support-dropdown-menu a {
+        transition: color 0.2s ease;
+      }
+    </style>
+
+    <!-- Main Content -->
+    <main class="pt-12 md:pt-11 max-w-[2560px] mx-auto">
+      <!-- Hero Section:  Holiday -->
+      <section
+        class="relative bg-gray-100 h-[500px] md:h-[570px] overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <!-- Desktop/Large screen video (≥820px) -->
+          <video
+            muted
+            autoplay
+            class="w-full h-[650px] object-cover z-10 pt-8 block max-[820px]:hidden"
+          >
+            <source src="img/largetall_2x (2).mp4" type="video/mp4" />
+          </video>
+
+          <!-- Mobile/Small screen video (<820px) -->
+          <video
+            muted
+            autoplay
+            class="w-full h-[650px] object-cover z-10 pt-8 hidden max-[820px]:block"
+          >
+            <source src="img/small_2x.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+          <h1
+            class="text-3xl md:text-5xl font-semibold mb-2 max-w-[300px] md:max-w-none mx-auto"
+          >
+            Wrapping up this special season.
+          </h1>
+          <p
+            class="text-lg md:text-3xl mt-2 max-w-[250px] md:max-w-none mx-auto"
+          >
+            There's still time to make their holiday one of a kind.
+          </p>
+          <div class="mt-6">
+            <a
+              href="#"
+              class="inline-block bg-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium btn-primary"
+            >
+              Shop gifts
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section: iPhone -->
+      <section
+        class="relative bg-gray-100 h-[500px] md:h-[570px] overflow-hidden mt-3"
+      >
+        <div class="absolute inset-0">
+          <!-- Image A: Desktop/default (hidden under 820px) -->
+          <img
+            src="img/hero_iphone_family__large.jpg"
+            alt="iPhone Family"
+            class="absolute inset-0 w-full h-full object-cover block max-[820px]:hidden pt-8"
+          />
+
+          <!-- Image B: Mobile (shown under 820px) -->
+          <img
+            src="img/hero_iphone_familysmall.jpg"
+            alt="iPhone Family Mobile"
+            class="absolute inset-0 w-full h-full object-cover hidden max-[820px]:block pt-8"
+          />
+        </div>
+        <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+          <h2 class="text-3xl md:text-5xl font-semibold mb-2">iPhone</h2>
+          <p
+            class="text-lg md:text-3xl mt-2 max-w-[260px] md:max-w-none mx-auto"
+          >
+            Say hello to the latest generation of iPhone.
+          </p>
+          <div class="mt-6 space-x-3">
+            <a
+              href="#"
+              class="inline-block bg-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium btn-primary"
+            >
+              Learn more
+            </a>
+            <a
+              href="#"
+              class="inline-block border-2 border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium btn-primary"
+            >
+              Shop iPhone
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section: AirPods Pro 3 -->
+      <section
+        class="relative bg-gray-100 h-[500px] md: h-[570px] overflow-hidden mt-3"
+      >
+        <div class="absolute inset-0">
+          <!-- Desktop/Tablet: large image, scales between 820-1919 and fills at ≥1920 -->
+          <img
+            src="img/hero_airpodspro_3_large.jpg"
+            alt="AirPods Pro 3"
+            class="absolute inset-0 w-full h-full object-cover block max-[820px]:hidden"
+          />
+
+          <!-- Mobile ≤820px: alternate image -->
+          <img
+            src="img/hero_airpodspro_3_small.jpg"
+            alt="AirPods Pro 3 Mobile"
+            class="absolute inset-0 w-full h-full object-cover hidden max-[820px]:block"
+          />
+        </div>
+        <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+          <h2 class="text-3xl md:text-5xl font-semibold mb-2">AirPods Pro 3</h2>
+          <p
+            class="text-lg md:text-3xl mt-2 max-w-[220px] md:max-w-none mx-auto"
+          >
+            The world's best in-ear Active Noise Cancellation.
+          </p>
+          <div class="mt-6 space-x-3">
+            <a
+              href="#"
+              class="inline-block bg-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium btn-primary"
+            >
+              Learn more
+            </a>
+            <a
+              href="#"
+              class="inline-block border-2 border-blue-600 text-blue-600 px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md: text-base font-medium btn-primary"
+            >
+              Buy
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Grid -->
+      <section
+        class="grid grid-cols-1 min-[820px]:grid-cols-2 gap-3 px-0 md:px-3 mt-3"
+      >
+        <!-- iPad Air -->
+        <div class="relative bg-sky-200 h-[500px] md:h-[580px] overflow-hidden">
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/promo_ipad_air_large_2x.jpg"
+              alt="iPad Air"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/promo_ipad_air_small_2x.jpg"
+              alt="iPad Air Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-12 md:pt-16 px-4">
+            <div
+              class="w-[114px] md:w-[144px] h-[26px] md:h-[33px] mx-auto mb-3 bg-contain bg-no-repeat bg-center"
+              style="
+                background-image: url('https://www.apple.com/v/home/ck/images/logos/ipad-air/promo_logo_ipadair__frwnnsqveeye_large.png');
+              "
+            ></div>
+            <p class="text-lg md:text-xl mb-5">
+              Now supercharged by the M3 chip.
+            </p>
+            <div class="space-x-3">
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Learn more
+              </a>
+              <a
+                href="#"
+                class="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Air -->
+        <div
+          class="relative bg-gray-100 h-[500px] md:h-[580px] overflow-hidden"
+        >
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/promo_macbook_air_large_2x.jpg"
+              alt="MacBook Air"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/promo_macbook_air_small_2x.jpg"
+              alt="MacBook Air Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+            <h3 class="text-3xl md:text-4xl font-semibold mb-2">MacBook Air</h3>
+            <p
+              class="text-lg md:text-xl mt-2 max-w-[290px] md:max-w-[330px] mx-auto"
+            >
+              Sky blue color.<br />
+              Sky high performance with M4.
+            </p>
+            <div class="mt-6 space-x-3">
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Learn more
+              </a>
+              <a
+                href="#"
+                class="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPad 11 -->
+        <div
+          class="relative bg-gray-100 h-[500px] md:h-[580px] overflow-hidden"
+        >
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/promo_ipad_large_2x.jpg"
+              alt="iPad"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/promo_ipad_small_2x.jpg"
+              alt="iPad Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+            <h3 class="text-3xl md:text-4xl font-semibold mb-2">iPad</h3>
+            <p
+              class="text-lg md:text-xl mt-2 max-w-[290px] md:max-w-[330px] mx-auto"
+            >
+              Now with the speed of the A16 chip and double starting storage.
+            </p>
+            <div class="mt-6 space-x-3">
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Learn more
+              </a>
+              <a
+                href="#"
+                class="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Homepod mini -->
+        <div
+          class="relative bg-gray-100 h-[500px] md:h-[580px] overflow-hidden"
+        >
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/tile_homepod_mini_large_2x.jpg"
+              alt="Homepod mini"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/tile_homepod_mini_small_2x.jpg"
+              alt="Homepod mini Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-10 md:pt-14 px-4">
+            <h3 class="text-3xl md:text-4xl font-semibold mb-2">
+              Homepod mini
+            </h3>
+            <p
+              class="text-lg md:text-xl mt-2 max-w-[290px] md:max-w-none mx-auto"
+            ></p>
+            <div class="mt-6 space-x-3">
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Learn more
+              </a>
+              <a
+                href="#"
+                class="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPhone Trade-in -->
+        <div
+          class="relative bg-gray-100 h-[500px] md:h-[580px] overflow-hidden"
+        >
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/promo_iphone_tradein_large_2x.jpg"
+              alt="Trade-in"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/promo_iphone_tradein_small_2x.jpg"
+              alt="Trade-in Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-12 md:pt-16 px-4">
+            <div
+              class="w-[128px] md:w-[155px] h-[27px] md:h-[32px] mx-auto mb-3 bg-contain bg-no-repeat bg-center"
+              style="
+                background-image: url('https://www.apple.com/v/home/ck/images/logos/iphone-tradein/promo_logo_iphone_tradein__7y3gtai5az66_large.png');
+              "
+            ></div>
+            <p
+              class="text-lg md: text-xl mb-5 max-w-[220px] md:max-w-[265px] mx-auto"
+            >
+              Get up to $180–$670 in credit when you trade in iPhone 13 or
+              higher. <sup>1</sup>
+            </p>
+            <div>
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Get your estimate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Card -->
+        <div
+          class="relative bg-gray-100 h-[500px] md:h-[580px] overflow-hidden"
+        >
+          <div class="absolute inset-0">
+            <!-- Desktop/Large screen (≥820px) -->
+            <img
+              src="img/promo_apple_card_large_2x.jpg"
+              alt="Apple Card"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover block max-[820px]:hidden"
+            />
+            <!-- Mobile/Small screen (<820px) -->
+            <img
+              src="img/promo_apple_card_small_2x.jpg"
+              alt="Apple Card Mobile"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full object-cover hidden max-[820px]:block"
+            />
+          </div>
+          <div class="relative z-20 text-center pt-12 md:pt-16 px-4">
+            <div
+              class="w-[88px] md:w-[108px] h-[27px] md:h-[33px] mx-auto mb-3 bg-contain bg-no-repeat bg-center"
+              style="
+                background-image: url('https://www.apple.com/v/home/ck/images/logos/apple-card/logo__dcojfwkzna2q_large.png');
+              "
+            ></div>
+            <p
+              class="text-lg md: text-xl mb-5 max-w-[260px] md:max-w-[290px] mx-auto"
+            >
+              Get up to 3% Daily Cash back with every purchase.
+            </p>
+            <div class="space-x-3">
+              <a
+                href="#"
+                class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Learn more
+              </a>
+              <a
+                href="#"
+                class="inline-block border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm btn-primary"
+              >
+                Apply now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Entertainment Section -->
+      <section class="bg-gray-100 mt-3 pt-6">
+        <div class="text-center mb-6">
+          <h2 class="text-3xl md:text-5xl font-semibold">
+            Endless entertainment.
+          </h2>
+        </div>
+
+        <!-- TV Gallery Carousel -->
+        <div class="relative mb-8 overflow-visible">
+          <div
+            class="w-full overflow-hidden scrollbar-hide px-4 max-[820px]:px-0"
+          >
+            <div class="flex items-center justify-center py-8">
+              <!-- Carousel Container with wider cards that overflow -->
+              <div
+                id="carouselContainer"
+                class="flex gap-4 max-[820px]:gap-2"
+                style="max-width: 1400px; margin: 0 auto"
+              >
+                <!-- Slide 1: TED Lasso -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <style>
+                    @media (max-width: 820px) {
+                      .carousel-slide {
+                        width: 275px !important;
+                        min-width: 275px !important;
+                        height: 497.8px !important;
+                      }
+                    }
+                  </style>
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/TED.jpg"
+                    alt="Ted Lasso"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/ted-small.jpg"
+                    alt="Ted Lasso Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Comedy</span> · Now streaming
+                      on Apple TV.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 2: F1 Movie -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/f1.jpg"
+                    alt="F1 Movie"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/f1-small.jpg"
+                    alt="F1 Movie Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Action</span> · Now streaming
+                      on Apple TV.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Plus -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/Plus.jpg"
+                    alt="Shrink"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/plur-small.jpg"
+                    alt="Plus Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Harrowingly
+                      beautiful of mind.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Jack -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/Jack.jpg"
+                    alt="jack"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/jack-small.jpg"
+                    alt="jack Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Edge of your
+                      seat.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 5: shrink -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/shrink.jpg"
+                    alt="Shrink"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/shrink-small.jpg"
+                    alt="Shrink Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Documentary</span> · Inspiring
+                      stories.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 6: Dowm -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/down.jpg"
+                    alt="Down"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/dowm-small.jpg"
+                    alt="Down Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Beyond
+                      imagination.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 7: moring -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/The-morning.jpg"
+                    alt="moring"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/morning-small.jpg"
+                    alt="moring Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Action</span> · Non-stop
+                      thrills.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 8: Family -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/The-family.jpg"
+                    alt="Family"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/family2-small.jpg"
+                    alt="Family Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Thriller</span> · Keep you
+                      guessing.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 9: Show -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) -->
+                  <img
+                    src="img/image_entertain/Show-horse.jpg"
+                    alt="Show"
+                    class="w-full h-full object-cover block max-[820px]:hidden"
+                  />
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/image_entertain/Show-horse-small.jpg"
+                    alt="Show Mobile"
+                    class="w-full h-full object-cover hidden max-[820px]:block"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Apple TV+</span> · Stream it
+                      all.
+                    </p>
+                    <button
+                      class="bg-white/90 hover:bg-white text-black px-5 py-2 rounded-full text-sm font-medium transition w-fit"
+                    >
+                      Stream now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            id="prevBtn"
+            class="hidden absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white backdrop-blur-sm text-black w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-10"
+          >
+            <svg
+              class="w-6 h-6 mx-auto"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            id="nextBtn"
+            class="hidden absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white backdrop-blur-sm text-black w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-10"
+          >
+            <svg
+              class="w-6 h-6 mx-auto"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          <!-- Carousel Dots -->
+          <div
+            id="carouselDots"
+            class="flex justify-center items-center space-x-2 mt-6"
+          >
+            <button
+              class="carousel-dot w-8 h-2 bg-black rounded-full transition-all duration-300 focus:outline-none"
+              data-index="0"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="1"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="2"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="3"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="4"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="5"
+            ></button>
+            <button
+              class="carousel-dot w-2 h-2 bg-black/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-black/70"
+              data-index="6"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Services Gallery -->
+        <!--    -->
+        <div class="relative overflow-visible bg-black">
+          <div class="text-center mb-6 bg-black">
+            <h2 class="text-3xl md:text-5xl font-semibold text-white pt-8">
+              More from Apple.
+            </h2>
+          </div>
+
+          <div
+            id="servicesGalleryWrapper"
+            class="w-full overflow-hidden scrollbar-hide px-4 max-[820px]:px-0"
+          >
+            <div class="flex items-center justify-center py-8">
+              <!-- Carousel Container with wider cards that overflow -->
+              <div
+                id="servicesCarousel"
+                class="flex gap-4 max-[820px]:gap-2"
+                style="max-width: 1400px; margin: 0 auto"
+              >
+                <!-- Slide 1: TED Lasso -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <style>
+                    @media (max-width: 820px) {
+                      .carousel-slide {
+                        width: 275px !important;
+                        min-width: 275px !important;
+                        height: 497.8px !important;
+                      }
+                    }
+                  </style>
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge (6).mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/films_small_2x.jpg"
+                    alt="Ted Lasso Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Comedy</span> · Now streaming
+                      on Apple TV.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 2: F1 Movie -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge (5).mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/holiday_small_2x.jpg"
+                    alt="F1 Movie Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Action</span> · Now streaming
+                      on Apple TV.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Plus -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/apple__small_2x.jpg"
+                    alt="Plus Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Harrowingly
+                      beautiful of mind.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Jack -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge (1).mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/jackson_small_2x.jpg"
+                    alt="Jack Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Edge of your
+                      seat.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 5: shrink -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge (2).mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/apple_small_2x.jpg"
+                    alt="Shrink Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Documentary</span> · Inspiring
+                      stories.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Slide 6: Dowm -->
+                <div
+                  class="carousel-slide flex-shrink-0 relative overflow-hidden group"
+                  style="width: 1250px; min-width: 1250px; height: 560px"
+                >
+                  <!-- Desktop/Large screen (≥820px) - Video -->
+                  <video
+                    autoplay
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover hidden min-[820px]:block"
+                  >
+                    <source
+                      src="img/service-gallary/xlarge (3).mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- Mobile/Small screen (<820px) -->
+                  <img
+                    src="img/service-gallary/accessibility_small_2x.jpg"
+                    alt="Down Mobile"
+                    class="w-full h-full object-cover block min-[820px]:hidden"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                  >
+                    <p class="text-white text-sm mb-2">
+                      <span class="font-semibold">Drama</span> · Beyond
+                      imagination.
+                    </p>
+                    <button
+                      class="bg-white hover:bg-white/90 text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all w-fit"
+                    >
+                      Watch the film
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Dots -->
+          <div
+            id="servicesCarouselDots"
+            class="flex justify-center items-center space-x-2 mt-6 pb-8"
+          >
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="0"
+            ></button>
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="1"
+            ></button>
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="2"
+            ></button>
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="3"
+            ></button>
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="4"
+            ></button>
+            <button
+              class="services-dot w-2 h-2 bg-white/50 rounded-full transition-all duration-300 focus:outline-none hover:bg-white/70"
+              data-index="5"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-100 text-gray-600 text-xs py-8 max-[820px]:bg-black max-[820px]:text-white"
+    >
+      <div class="max-w-[980px] mx-auto px-4 md:px-6">
+        <!-- Footnotes -->
+        <section class="border-b border-gray-300 pb-6 mb-6">
+          <p class="mb-4">
+            1. Trade‑in values will vary based on the condition, year, and
+            configuration of your eligible trade‑in device. Not all devices are
+            eligible for credit. You must be at least the age of majority to be
+            eligible to trade in for credit or for an Apple Gift Card. Trade‑in
+            value may be applied toward qualifying new device purchase, or added
+            to an Apple Gift Card. Actual value awarded is based on receipt of a
+            qualifying device matching the description provided when estimate
+            was made. Sales tax may be assessed on full value of a new device
+            purchase. In‑store trade‑in requires presentation of a valid photo
+            ID (local law may require saving this information). Offer may not be
+            available in all stores and may vary between in‑store and online
+            trade‑in. Some stores may have additional requirements. Apple or its
+            trade‑in partners reserve the right to refuse, cancel, or limit
+            quantity of any trade‑in transaction for any reason. More details
+            are available from Apple’s trade-in partner for trade‑in and
+            recycling of eligible devices. Restrictions and limitations may
+            apply.
+          </p>
+          <p class="mb-4">
+            <strong>Beware of gift card scams. Do not share your code. </strong>
+          </p>
+          <p class="mb-4">
+            Valid only for U.S. transactions in Apple properties. For
+            assistance, visit
+            <a href="#" class="text-blue-600 underline"
+              >support.apple.com/giftcard</a
+            >
+            or call 800-275-2273. A subscription is required for Apple Arcade,
+            Apple Fitness+, Apple Music, and Apple TV. Features are subject to
+            change. Some features, applications, and services may not be
+            available in all regions or all languages.
+          </p>
+        </section>
+
+        <!-- Footer Navigation -->
+        <nav
+          class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8 max-[820px]:gap-0"
+        >
+          <!-- Column 1: Shop and Learn -->
+          <div class="footer-section">
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex"
+            >
+              <h3 class="font-semibold text-white">Shop and Learn</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3 class="font-semibold mb-3 max-[820px]:hidden">
+              Shop and Learn
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Mac</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >iPad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >iPhone</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Watch</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >AirPods</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >TV & Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >AirTag</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Gift Cards</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">Apple Wallet</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              Apple Wallet
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Wallet</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Card</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Pay</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Cash</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Account & Entertainment -->
+          <div class="footer-section">
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex"
+            >
+              <h3 class="font-semibold text-white">Account</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3 class="font-semibold text-gray-900 mb-3 max-[820px]:hidden">
+              Account
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Manage Your Apple Account</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Store Account</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >iCloud. com</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">Entertainment</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              Entertainment
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple One</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple TV+</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Music</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Arcade</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Fitness+</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple News+</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Podcasts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >App Store</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Apple Store -->
+          <div class="footer-section">
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex"
+            >
+              <h3 class="font-semibold text-white">Apple Store</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3 class="font-semibold text-gray-900 mb-3 max-[820px]:hidden">
+              Apple Store
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Find a Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Genius Bar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Today at Apple</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Group Reservations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Camp</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Store App</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Certified Refurbished</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Trade In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Financing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Carrier Deals at Apple</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Order Status</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shopping Help</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Business, Education, etc. -->
+          <div class="footer-section">
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex"
+            >
+              <h3 class="font-semibold text-white">For Business</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3 class="font-semibold text-gray-900 mb-3 max-[820px]:hidden">
+              For Business
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple and Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shop for Business</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">For Education</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                <footer
+                class="bg-gray-100 text-gray-600 text-xs py-8 max-[820px]:bg-black max-[820px]:text-white"
+              >
+                viewBox="0 0 24 24" >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              For Education
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple and Education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shop for K-12</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shop for College</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">For Healthcare</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              For Healthcare
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple in Healthcare</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">For Government</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              For Government
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shop for Government</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Shop for Veterans and Military</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Apple Values & About -->
+          <div class="footer-section">
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex"
+            >
+              <h3 class="font-semibold text-white">Apple Values</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3 class="font-semibold text-gray-900 mb-3 max-[820px]:hidden">
+              Apple Values
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Environment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Inclusion and Diversity</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Racial Equity and Justice</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Supply Chain</a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="footer-toggle w-full flex justify-between items-center py-3 border-b border-gray-700 hidden max-[820px]:flex mt-6"
+            >
+              <h3 class="font-semibold text-white">About Apple</h3>
+              <svg
+                class="w-3 h-3 transform transition-transform footer-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <h3
+              class="font-semibold text-gray-900 mb-3 mt-6 max-[820px]:hidden"
+            >
+              About Apple
+            </h3>
+            <ul
+              class="space-y-2 footer-content max-[820px]:py-3"
+              style="
+                transition: max-height 0.3s ease, opacity 0.3s ease;
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+              "
+            >
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Newsroom</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Apple Leadership</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Career Opportunities</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Investors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Ethics & Compliance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="footer-link hover:text-gray-900 max-[820px]:text-gray-400 max-[820px]:hover:text-white"
+                  >Contact Apple</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- More Ways to Shop -->
+        <div class="border-t border-gray-300 pt-4 mb-4">
+          <p>
+            More ways to shop:
+            <a href="#" class="text-blue-600 underline">Find an Apple Store</a>
+            or
+            <a href="#" class="text-blue-600 underline">other retailer</a> near
+            you. Or call
+            <a href="tel:1-800-692-7753" class="text-blue-600 underline"
+              >1-800-MY-APPLE</a
+            >.
+          </p>
+        </div>
+
+        <!-- Bottom Links -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center text-xs"
+        >
+          <div class="mb-4 md:mb-0">
+            <span>Copyright © 2025 Apple Inc. All rights reserved. </span>
+          </div>
+          <div class="flex flex-wrap gap-x-4 gap-y-2">
+            <a href="#" class="footer-link hover:text-gray-900"
+              >Privacy Policy</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="footer-link hover:text-gray-900">Terms of Use</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="footer-link hover:text-gray-900"
+              >Sales and Refunds</a
+            >
+            <span class="text-gray-400">|</span>
+            <a href="#" class="footer-link hover:text-gray-900">Legal</a>
+            <span class="text-gray-400">|</span>
+            <a href="#" class="footer-link hover:text-gray-900">Site Map</a>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <a href="#" class="footer-link hover:text-gray-900"
+              >United States</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
